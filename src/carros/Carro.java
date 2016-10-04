@@ -1,9 +1,12 @@
 package carros;
-
 public class Carro {
+//obs. È importante ressaltar  que a omissão do encapsulamento nas variaveis de instancia foi proposital 
 	int potencia;
 	int velocidade;
 	String nome;
+	public Carro(){
+		
+	}
 	public Carro(int potencia) {
 		this.potencia = potencia;
 		velocidade = 0;
