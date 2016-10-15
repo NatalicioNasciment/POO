@@ -1,29 +1,63 @@
 package carros;
+
 public class Carro {
-//obs. È importante ressaltar  que a omissão do encapsulamento nas variaveis de instancia foi proposital 
-	int potencia;
-	int velocidade;
-	String nome;
-	public Carro(){
-		
+
+	private int potencia;
+	private int velocidade;
+	private int velocidadeMaxima;
+	private String nome;
+
+	public Carro() {
+
 	}
-	public Carro(int potencia) {
+
+	public Carro(String nome, int potencia, int velocidadeMaxima) {
+		this.nome = nome;
 		this.potencia = potencia;
+		this.velocidadeMaxima = velocidadeMaxima;
 		velocidade = 0;
-		// TODO Auto-generated constructor stub
 	}
-	
-	void acelerar(){
-		velocidade += potencia;
+
+	public int getPotencia() {
+		return potencia;
 	}
-	void frear(){
-		velocidade = velocidade/2;
+
+	public void setPotencia(int potencia) {
+		this.potencia = potencia;
 	}
-	int getVelocidade(){
+
+	public int getVelocidadeMaxima() {
+		return velocidadeMaxima;
+	}
+
+	public void setVelocidadeMaxima(int velocidadeMaxima) {
+		this.velocidadeMaxima = velocidadeMaxima;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public void setVelocidade(int velocidade) {
+		this.velocidade = velocidade;
+	}
+
+	public int getVelocidade() {
 		return velocidade;
 	}
-	void imprimir(){
-		System.out.println("O carro "+ nome + "esta a velocidade de " + getVelocidade()+ "Km/h" );
+
+	public void acelerar() {
+		velocidade += potencia;
+		if(velocidade > velocidadeMaxima)
+			velocidade = velocidadeMaxima;
+	}
+
+	public void frear() {
+		velocidade = velocidade / 2;
 	}
 
 }
