@@ -1,5 +1,7 @@
 package banco;
 
+import java.awt.BorderLayout;
+
 public class ContaEspecial extends ContaCorrent{
 	int limite;
 	public ContaEspecial(int limite) {
